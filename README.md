@@ -57,3 +57,30 @@ The best model achieves 0.45 accuracy score on the test set with lambda = 0.01, 
 
 ![best_model](https://user-images.githubusercontent.com/27776652/33224775-be1db6e4-d132-11e7-9087-dd25586d40fc.PNG)
 
+## Step 5 : Use Another Model
+In order to find a better model for the data, I explored another model.The second model comes from the the research paper "Robust Image Sentiment Analysis Using Progressively Trained and Domain Transferred Deep Networks" (You at el., 2015).
+
+![second_model](https://user-images.githubusercontent.com/27776652/33224803-0fe1d2e4-d133-11e7-869f-08b9b7633186.png)
+
+## Step 6 : Evalute the Model
+The second model is worse than the first model on the training set. I think the reason is that the second model
+has more layers than the first model, the vanishing gradient problem is stopping the cost to decrease to the local minimum.
+This is apparent in that the cost score stops decreasing from 1.85 since epoch 65.
+![second_model_p](https://user-images.githubusercontent.com/27776652/33224814-25f3245c-d133-11e7-8439-7be75f7018fb.png)
+![second_model_p2](https://user-images.githubusercontent.com/27776652/33224816-272a4bac-d133-11e7-83fa-6b3959bd2648.png)
+
+## Step 7: Use The Results From Last FC Layer In K-Means Clustering and PCA:
+Although the best model could only achieve 0.45 accuracy score on the test set, I could still use the result of the last fully
+connected layer(1024 outputs) as input in conducing Kmeans Clustering and Principal component analysis.
+
+After conducting Principal component analysis, I found that over 50% of the total variance in the 1024 features could be explained by 9 principal components.
+![kmeans_comparison](https://user-images.githubusercontent.com/27776652/33224840-5e96bda0-d133-11e7-85a9-c93c7ed86ed4.PNG)
+
+By using the 9 principal components instead of the 1024 features in clustering, the result has improved a little. Therefore, we know that the 9 principal components are useful in performing sentiment analysis.
+
+## Step 8: Future Work
+1. Get more labeled data: Use AMT(Amazon Mechanical Turk) to get more data.
+2. Learn from other researches: Expedia has conducted similar research on ranking hotel images. They use 100,000 images and the
+MAPE on the test set is 12.5%.(https://news.developer.nvidia.com/expedia-ranking-hotel-images-withdeep-learning/)
+3. Explore classic CNNs and use pre-trained weights: LeNet, AlexNet and others.
+
