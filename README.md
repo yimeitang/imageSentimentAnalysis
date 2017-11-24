@@ -74,6 +74,7 @@ Although the best model could only achieve 0.45 accuracy score on the test set, 
 connected layer(1024 outputs) as input in conducing Kmeans Clustering and Principal component analysis.
 
 After conducting Principal component analysis, I found that over 50% of the total variance in the 1024 features could be explained by 9 principal components.
+
 ![kmeans_comparison](https://user-images.githubusercontent.com/27776652/33224840-5e96bda0-d133-11e7-85a9-c93c7ed86ed4.PNG)
 
 By using the 9 principal components instead of the 1024 features in clustering, the result has improved a little. Therefore, we know that the 9 principal components are useful in performing sentiment analysis.
