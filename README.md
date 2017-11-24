@@ -35,3 +35,25 @@ Images of Rating 4:
 
 Images of Rating 5:
 ![6picsofrating5](https://user-images.githubusercontent.com/27776652/33224708-fbc719dc-d131-11e7-88da-079f19917df7.PNG)
+
+
+## Step 3 : Fit The Model
+I first built a very simple Conventional Neural Network on Tensorflow. The structure of the CNN is as follows(by Andrew Ng's CNN Model from Convolutional Neural Networks at Coursera:
+
+![first_model](https://user-images.githubusercontent.com/27776652/33224740-4c4efdb6-d132-11e7-8ccb-5d9081a6c33d.png)
+
+## Step 4 : Evalute the Model 
+First, I run the model with mini-batch size of 64 and 30 epochs.
+
+![first_model_p](https://user-images.githubusercontent.com/27776652/33224752-6f0d6248-d132-11e7-8f74-9c9da75ddb7e.png)
+
+The model has achieved 98% accuracy on the training set at epoch 25 but it is doing poorly on the test set. Therefore,
+the model is complex enough to handle this data set but the problem is over fitting.
+In order to solve the problem of over fitting. I use L2 regularization and different size of mini-batch to fine-tune the model.
+
+![first_model_r_p](https://user-images.githubusercontent.com/27776652/33224759-9454c92e-d132-11e7-8e9e-3f92d4518f3e.PNG)
+
+The best model achieves 0.45 accuracy score on the test set with lambda = 0.01, mini-batch size of 360(whole batch).
+
+![best_model](https://user-images.githubusercontent.com/27776652/33224775-be1db6e4-d132-11e7-9087-dd25586d40fc.PNG)
+
