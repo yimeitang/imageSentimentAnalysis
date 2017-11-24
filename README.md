@@ -20,3 +20,18 @@ picture has different size, after exploring some classic CNN models, most of the
 Therefore, I re-sized all the images to 227\*227. Now each image is represented by a numpy array, shape of (227,227,3).
 Since I only have 400 data set, I will not use validation set butonly use 10% as the test set and the remaining 360 images as
 training set. I randomly shuffled the 400 images before splitting into training set and test set.
+
+Images of Rating 1:
+![6picsofrating1](https://user-images.githubusercontent.com/27776652/33224704-fb8b5104-d131-11e7-922c-b6022ee9b18a.PNG)
+
+Images of Rating 2:
+![6picsofrating2](https://user-images.githubusercontent.com/27776652/33224705-fb9b2ad4-d131-11e7-9bf3-1f7ae0e972fe.PNG)
+
+Images of Rating 3:
+![6picsofrating3](https://user-images.githubusercontent.com/27776652/33224706-fba8c1bc-d131-11e7-84d5-1dab15625c84.PNG)
+
+Images of Rating 4:
+![6picsofrating4](https://user-images.githubusercontent.com/27776652/33224707-fbb568b8-d131-11e7-909b-e9c03a6679be.PNG)
+
+Images of Rating 5:
+![6picsofrating5](https://user-images.githubusercontent.com/27776652/33224708-fbc719dc-d131-11e7-88da-079f19917df7.PNG)
